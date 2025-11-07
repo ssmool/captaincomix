@@ -1,0 +1,11 @@
+pillow
+moviepy==1.0.3
+requests
+scikit-learn
+opencv-python
+torch
+torchvision
+ultralytics
+flickrapi
+google-api-python-client
+
