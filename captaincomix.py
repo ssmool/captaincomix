@@ -1,4 +1,4 @@
-from .captain_comix import *
+from captain_cominx.captomix import *
 
 # Optional: Provide a convenience CLI entry
 
