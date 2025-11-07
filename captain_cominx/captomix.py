@@ -62,7 +62,6 @@ except Exception:
 CONFIG = {
     "GOOGLE_API_KEY": "YOUR_GOOGLE_API_KEY",
     "GOOGLE_CSE_ID": "YOUR_GOOGLE_CSE_ID",  # Custom Search Engine ID
-    "FLICKR_API_KEY": "YOUR_FLICKR_API_KEY",
     "FLICKR_API_SECRET": "YOUR_FLICKR_API_SECRET",
     # search limits
     "MAX_VIDEO_RESULTS": 3,
@@ -268,6 +267,15 @@ def search_flickr_videos(query: str, max_results: int = 3) -> List[str]:
         print("Flickr API key not set — skipping Flickr search")
         return []
     # Placeholder: for a production-grade pipeline, use flickrapi.FlickrAPI and proper auth.
+    elif:
+        search_url = f"https://api.flickr.com/services/rest/?method=flickr.mp4.search&api_key={FLICKR_API_SECRET}&tags={query}&format=json&nojsoncallback=1
+        res = requests.get(search_url)
+        data = res.json()
+        items = data.get('items', [])
+        urls = [it.get('link') for it in items if it.get('link')]
+        # filter for mp4/gif
+        urls = [u for u in urls if u.lower().endswith(('.mp4', '.gif'))][:max_results]
+        return urls
     return []
 
 
@@ -464,3 +472,5 @@ def captomix(input_image_path: str,
         'mp4': out_mp4,
         'gif': out_gif,
     }
+
+
