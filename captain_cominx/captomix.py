@@ -267,8 +267,8 @@ def search_flickr_videos(query: str, max_results: int = 3) -> List[str]:
         print("Flickr API key not set — skipping Flickr search")
         return []
     # Placeholder: for a production-grade pipeline, use flickrapi.FlickrAPI and proper auth.
-    elif:
-        search_url = f"https://api.flickr.com/services/rest/?method=flickr.mp4.search&api_key={FLICKR_API_SECRET}&tags={query}&format=json&nojsoncallback=1
+    else:
+        search_url = f'https://api.flickr.com/services/rest/?method=flickr.mp4.search&api_key={FLICKR_API_SECRET}&tags={query}&format=json&nojsoncallback=1'
         res = requests.get(search_url)
         data = res.json()
         items = data.get('items', [])
