@@ -1,3 +1,5 @@
+![Python CAPTAIN_COMIX](./assets/HELZZINGIONICPX.gif)
+
 # CaptainComix
 
 **CaptainComix** is a Python tool to transform still images into animated sequences by overlaying video/GIF layers and applying visual filters.  
