@@ -1,4 +1,4 @@
-![Python CAPTAIN_COMIX](./assets/HELZZINGIONICPX.gif)
+![Python CAPTAIN_COMIX](./assets/captain_comix.gif)
 
 # CaptainComix
 
